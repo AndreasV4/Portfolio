@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/andreas.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <canvas id="bg"></canvas>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="info.html">About me</a>
+        <a href="Contact.html">Contact</a>
+        <a href="arbeid.html">My Work</a>
+        <a href="javascript:void(0);" class="icon" onclick="hoverfunction()">
+            <i class="top-bars"></i>
+        </a>
+
+        <script src="javascript.js"></script>
+    </div>
+
+
+
+
+    <h2>About me:</h2>
+    <p>Hi, my name is Andreas Apeland and im <span id="age"></span> years old.</p>
+    <p>I currently live in Norway and i study IT.</p>
+    <p>Gaming and coding is what im passionate about, i also like meeting new people.</p>
+    <img src="images/IMG_5069.JPG" alt="Error loading image"
+        style="margin-top: 20px; width: 300px; border-radius: 15px; display: block; margin-left: auto; margin-right: auto;">
+
+    <style>
+        p,
+        h2 {
+            text-align: center;
+        }
+    </style>
+
+    <style>
+        p {
+            font-size: 25px;
+        }
+    </style>
+
+
+    <script>
+
+        const birthday = new Date(2007, 9, 19);
+        function calculateAge(birthDate) {
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            const dayDiff = today.getDate() - birthDate.getDate();
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                age--;
+            }
+            return age;
+        }
+
+        document.getElementById("age").textContent = calculateAge(birthday);
+    </script>
+
+    <p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>

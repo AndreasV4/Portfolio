@@ -1,0 +1,163 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+.topnav .icon {
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.top-bars {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+body {
+    background-color: #555;
+}
+
+
+
+
+html,
+body {
+    height: 120%;
+    margin: 0;
+    background: #0f1113;
+    font-family: system-ui, sans-serif;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(120deg, #0f1113, #1b1d20, #151719);
+    background-size: 400% 400%;
+    animation: flow 18s ease-in-out infinite;
+    opacity: 0.09;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes flow {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+#bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar {
+    width: 12px;
+    /* width of vertical scrollbar */
+    height: 12px;
+    /* height of horizontal scrollbar */
+}
+
+/* Scrollbar track background */
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 3px solid #f0f0f0;
+    /* creates padding around thumb */
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
